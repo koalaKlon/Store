@@ -1,4 +1,4 @@
-#regis{
+#logout{
   display: flex; display: -webkit-box;display: -ms-flexbox;display:-webkit-flex;
   align-items:center;-webkit-align-items:center;-ms-align-items:center;
   justify-content:space-between;-webkit-justify-content:space-between;-ms-justify-content:space-between;
@@ -7,11 +7,11 @@
   font-size: 1.03vw;
   height: auto;
 }
-#regis:hover {
+#logout:hover {
   background-color: #ededed;
   color: #2e2e30;
 }
-#regis img, #cart img{
+#logout img, #cart img{
   width: 3.5vw;
   height: 2.5vmax;
   padding-right: 1vw;
