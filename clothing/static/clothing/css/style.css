@@ -1,6 +1,16 @@
 @charset "UTF-8";
-.anime{transition:all 200ms linear; -webkit-transition:all 200ms linear; -ms-transition:all 200ms linear; -o-transition:all 200ms linear; -moz-transition:all 200ms linear;}
-*{box-sizing: border-box; margin:0; padding: 0;}
+.anime{
+    transition:all 200ms linear;
+    -webkit-transition:all 200ms linear;
+    -ms-transition:all 200ms linear;
+    -o-transition:all 200ms linear;
+    -moz-transition:all 200ms linear;
+    }
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    }
 body{
   background-color: #eaeaea;
   font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
@@ -479,6 +489,32 @@ footer{
 #order img{
   height: 2vmax;
 }
+
+.regis{
+  display: flex;
+  display: -webkit-box;display: -ms-flexbox;
+  display:-webkit-flex;
+  align-items:left;
+  -webkit-align-items:left;
+  -ms-align-items:left;
+  justify-content:space-between;
+  -webkit-justify-content:space-between;
+  -ms-justify-content:space-between;
+  border: 1px solid #ededed;
+  color: #fff;
+  font-size: 1.03vw;
+  height: auto;
+}
+.regis:hover {
+  background-color: #ededed;
+  color: #2e2e30;
+}
+.regis img, #cart img{
+  width: 3.5vw;
+  height: 2.5vmax;
+  padding-right: 1vw;
+}
+
 #order:hover{
   background-color: inherit;
   color: #24b4b4;
@@ -629,12 +665,16 @@ footer{
     margin: 2vmax 0;
     padding: 0.5vw 1.1vw;
     font-size: 2vmax;
+    display: flex;
+    justify-content: space-between;
   }
   .product .btn{
     padding: 1vh 1.5vw;
   }
   #main_nav a{
     font-size: 1.15vmax;
+    display: flex;
+    justify-content: space-between;
   }
   #location, #currency, #menu{
     display: none;

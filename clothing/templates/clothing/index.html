@@ -19,6 +19,7 @@
 
 
 </head>
+
 <body>
   <div id="black_fill"></div>
 <div id="cart_box" class="anime">
@@ -41,24 +42,30 @@
           <div class="collapse navbar-collapse" id="navbarText">
               {% if user.is_authenticated %}
 
-              <div id="logout" class="btn anime">
-                <img src="{% static 'clothing/img/1.png' %}">
-                <a href="{% url 'logout' %}">ВЫЙТИ</a>
-              </div>
+              <a href="{% url 'logout' %}">
+                <div id="logout" class="btn anime">
+                    <img src="{% static 'clothing/img/1.png' %}">
+                    ВЫЙТИ
+                </div>
+              </a>
               <div class="nav-item">
                   <a class="nav-link" href="#">Welcom, {{user.username}}</a>
               </div>
 
               {% else %}
 
-              <div id="regis" class="btn anime">
-                <img src="{% static 'clothing/img/1.png' %}">
-                <a href="{% url 'register' %}">РЕГИСТРАЦИЯ</a>
-              </div>
-            <div id="sign" class="btn anime">
-                <img src="{% static 'clothing/img/1.png' %}">
-                <a href="{% url 'login' %}">ВОЙТИ</a>
-            </div>
+              <a href="{% url 'register' %}">
+                <div id="regis" class="btn anime regis">
+                    <img src="{% static 'clothing/img/1.png' %}">
+                    РЕГИСТРАЦИЯ
+                </div>
+              </a>
+              <a href="{% url 'login' %}">
+                <div id="sign" class="btn anime">
+                    <img src="{% static 'clothing/img/1.png' %}">
+                    ВОЙТИ
+                </div>
+              </a>
 
 
               {% endif %}
