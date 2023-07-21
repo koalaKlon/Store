@@ -33,7 +33,7 @@ def login_request(request):
             if user is not None:
                 login(request, user)
                 messages.info(request, f"You are now logged in as {username}.")
-                return redirect('home')
+                return redirect('clothing:home')
             else:
                 messages.error(request, "Invalid username or password.")
         else:
@@ -49,7 +49,7 @@ def register_request(request):
             user = form.save()
             login(request, user)
             messages.success(request, "Registration successful.")
-            return redirect('home')
+            return redirect('clothing:home')
         else:
             messages.error(request, "Unsuccessful registration. Invalid information.")
             form = UserRegistrationForm()
@@ -61,7 +61,7 @@ def register_request(request):
 def logout_request(request):
     logout(request)
     messages.info(request, "You have successfully logged out. ")
-    return redirect("home")
+    return redirect("clothing:home")
 
 
 def product_list(request, category_slug=None):

@@ -42,7 +42,7 @@
           <div class="collapse navbar-collapse" id="navbarText">
               {% if user.is_authenticated %}
 
-              <a href="{% url 'logout' %}">
+              <a href="{% url 'clothing:logout' %}">
                 <div id="logout" class="btn anime">
                     <img src="{% static 'clothing/img/1.png' %}">
                     ВЫЙТИ
@@ -54,13 +54,13 @@
 
               {% else %}
 
-              <a href="{% url 'register' %}">
+              <a href="{% url 'clothing:register' %}">
                 <div id="regis" class="btn anime regis">
                     <img src="{% static 'clothing/img/1.png' %}">
                     РЕГИСТРАЦИЯ
                 </div>
               </a>
-              <a href="{% url 'login' %}">
+              <a href="{% url 'clothing:login' %}">
                 <div id="sign" class="btn anime">
                     <img src="{% static 'clothing/img/1.png' %}">
                     ВОЙТИ
